@@ -10,6 +10,7 @@ const Slider = () => {
       <div className="section-center">
         {review.map((review, reviewIndex) => {
           const { id, image, name, title, quote } = review;
+
           let position = "nextSlide";
           if (reviewIndex === index) {
             position = "activeSlide";

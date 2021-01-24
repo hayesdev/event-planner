@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import Content from "./components/Content";
-import Slider from "./components/Slider";
+
 import Footer from "./components/Footer";
 
 function App() {
@@ -12,9 +12,7 @@ function App() {
       <div className="container">
         <Header />
         <Banner />
-        <Content>
-          <Slider />
-        </Content>
+        <Content />
 
         <Footer />
       </div>

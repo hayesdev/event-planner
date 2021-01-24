@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "./Slider";
 
 const Content = () => {
   return (
@@ -38,6 +39,8 @@ const Content = () => {
           </p>
         </h3>
       </section>
+
+      <Slider />
 
       <div className="section-title">Work With Us</div>
       <h3>
