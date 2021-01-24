@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
+import { FaQuoteRight } from "react-icons/fa";
 import reviews from "../reviews.js";
 
 const Slider = () => {
@@ -14,6 +16,15 @@ const Slider = () => {
       setIndex(0);
     }
   }, [index, review]);
+
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 8000);
+    return () => {
+      clearInterval(slider);
+    };
+  }, [index]);
 
   return (
     <section className="slider-section">
@@ -37,6 +48,7 @@ const Slider = () => {
               <img src={"#"} alt="review image" />
               <h4>{name}</h4>
               <p>{quote}</p>
+              <FaQuoteRight className="icon" />
             </article>
           );
         })}
@@ -46,7 +58,7 @@ const Slider = () => {
             setIndex(index - 1);
           }}
         >
-          prev
+          <FiChevronLeft />
         </button>
         <button
           className="next"
@@ -54,7 +66,7 @@ const Slider = () => {
             setIndex(index + 1);
           }}
         >
-          next
+          <FiChevronRight />
         </button>
       </div>
     </section>

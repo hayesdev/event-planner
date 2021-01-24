@@ -20,20 +20,33 @@ p {
   font-size: 1rem;
 }
 
+a {
+  padding: 10px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100vw;
   height: 100vh;
+  margin: auto;
   border: 1px solid red;
 }
 
 .header {
   display: flex;
+  margin-bottom: 10px;
+  max-width: 95%;
   min-height: 7.5vh;
-  justify-content: center;
-  border: 1px solid red;
+  justify-content: space-between;
+  color: whitesmoke;
+  background-color: darkslateblue;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
 }
 
 .banner,
@@ -43,22 +56,44 @@ p {
   justify-content: center;
   align-items: center;
   margin: auto;
-  border: 1px solid red;
+}
+
+.content {
+  color: darkslateblue;
+  margin-top: 20px;
 }
 
 .col-container {
   display: flex;
-  width: 90%;
-  height: auto;
+  width: 95%;
   justify-content: center;
   text-align: center;
-  border: 1px solid red;
 }
 
 .footer {
   display: flex;
   justify-content: center;
-  border: 1px solid red;
+}
+
+.slider-section {
+  width: 100vw;
+  margin: 2rem auto;
+  max-width: 1170px;
+  color: whitesmoke;
+  background-color: darkslateblue;
+  /* border: 1px solid red; */
+}
+
+.section-center {
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 80vw;
+  height: 200px;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  overflow: hidden;
 }
 
 article {
@@ -87,7 +122,7 @@ article.nextSlide {
 .prev,
 .next {
   position: relative;
-  top: 200px;
+  top: 150px;
   transform: translateY(-50%);
   background: hsl(210, 22%, 49%);
   color: #fff;
