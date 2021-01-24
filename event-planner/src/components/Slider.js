@@ -5,6 +5,16 @@ const Slider = () => {
   const [review, setReview] = useState(reviews);
   const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    const lastIndex = reviews.length - 1;
+    if (index < 0) {
+      setIndex(lastIndex);
+    }
+    if (index > lastIndex) {
+      setIndex(0);
+    }
+  }, [index, review]);
+
   return (
     <section className="slider-section">
       <div className="section-center">

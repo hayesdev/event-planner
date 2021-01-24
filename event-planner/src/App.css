@@ -86,7 +86,7 @@ article.nextSlide {
 
 .prev,
 .next {
-  position: absolute;
+  position: relative;
   top: 200px;
   transform: translateY(-50%);
   background: hsl(210, 22%, 49%);
